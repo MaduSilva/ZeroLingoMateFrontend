@@ -1,50 +1,70 @@
-# Welcome to your Expo app 👋
+# ZeroLingoMate - Frontend
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Description
 
-## Get started
+ZeroLingoMate is a mobile translation app built with Expo and React Native. It complements the backend service by providing a user-friendly interface to translate text from **Portuguese (pt-BR)** to **English (en)** and then to **Korean (ko)**, and vice versa. The app simplifies the process of chained translations.
 
-1. Install dependencies
+## Why?
+The idea of implementing a chain translation system, instead of directly translating from Portuguese to Korean, comes from the fact that translations between these two languages often have flaws. Since English to Korean translation tends to be more accurate, English is used as an intermediary language, ensuring a more accurate and high-quality translation.
 
-   ```bash
-   npm install
-   ```
+<sub>
+it was also motivated by my frustration with having to switch between two different apps to translate everything during my studies. The goal is to simplify the process and make translations more efficient in one place. So it's for my personal use :shipit: also for studies.
+</sub>
 
-2. Start the app
+## Features
 
-   ```bash
-    npx expo start
-   ```
+- Translates from **Portuguese (pt-BR)** to **English (en)**, then from **English (en)** to **Korean (ko)**.
 
-In the output, you'll find options to open the app in a
+- 'Phrases' tab where you can store ready-made phrases.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- 'Glossary' tab, which allows you to register words and their respective translations.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+<sub>more work in progress...</sub>
 
-## Get a fresh project
+## Technologies Used
 
-When you're ready, run:
+- **React Native**: Framework for building cross-platform mobile applications.
+- **Expo**: Toolchain for easier development and testing of React Native apps.
+- **Axios**: For API requests to the backend.
+- **React Navigation**: For managing navigation between screens.
+- **TypeScript**: For type safety and better code maintainability.
 
-```bash
-npm run reset-project
+## How to Use
+
+### Prerequisites
+
+- **Node.js** installed on your machine.
+
+
+### Installation
+
+1. Clone the repository:
+
+```
+git clone https://github.com/MaduSilva/ZeroLingoMateFrontend.git
+
+cd ZeroLingoMateFrontend
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install the dependencies:
 
-## Learn more
+```
+`npm install`
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Start the app:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+` npx expo start`
+```
+4. Scan the QR code provided by the Expo server using the Expo Go app (available on Android and iOS) to view the app on your device.
 
-## Join the community
+### Configuration
 
-Join our community of developers creating universal apps.
+Make sure the backend service is running on the appropriate port (default: `8081`). Update the API URL in the project configuration if necessary:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Endpoints
+
+The app communicates with the backend service through the `/translate` endpoint. For more details on the API, refer to the [ZeroLingoMate Backend Documentation](https://github.com/MaduSilva/ZeroLingoMateBackend).
+

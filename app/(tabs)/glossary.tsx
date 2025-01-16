@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet } from "react-native";
 
-export default function Index() {
+export default function GlossaryScreen() {
   return (
     <View style={[styles.view]}>
-      <Text>Início</Text>
+      <Text>Glossary</Text>
     </View>
   );
 }
